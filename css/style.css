@@ -1,5 +1,8 @@
 /* Reset y estilos base */
 * {
+    font-family: "Source Code Pro", monospace;
+    /* 200 ~ 900 */
+    font-weight: 500;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,10 +10,10 @@
 
 
 body {
-    font-family: 'Tahoma', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #ffffff;
     overflow-x: hidden;
+    background-color: #000;
 }
 
 .contenedor {
@@ -19,38 +22,12 @@ body {
     padding: 0 20px;
 }
 
-.creditos {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 9999;
-    max-width: 290px;
-    background: rgba(0, 0, 0, 0.45);
-    color: #fff;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    line-height: 1.2;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(4px);
-}
-
-/* Evita que el bloque tape interacción importante */
-.creditos a {
-    color: #dfeffd;
-    text-decoration: underline;
-}
-
-.creditos p {
-    margin: 0 0 0.2rem 0;
-}
-
 /* Navegación */
 .navegacion {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #BFEC1D, #22BB39);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -66,9 +43,8 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
 .menu a:hover {
@@ -77,13 +53,14 @@ body {
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    padding-right: 3vw;
 }
 
 .contenedor-hero {
@@ -100,77 +77,91 @@ body {
 .hero-overlay {
     position: relative;
     z-index: 2;
-    text-align: center;
+    text-align: right;
     color: #fff;
     padding: 0 1rem;
-    border-radius: 10px;
 }
 
-.titulo-principal {
-    font-family: "Allan", serif;
-    color: hsl(80deg 97.59% 48.82% / 50%);
-    font-size: 12rem;
+.titulo-principal span {
+    font-family: "Teko", sans-serif !important;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 8rem;
     font-weight: 900;
-    margin-bottom: 1rem;
+    /* margin-bottom: 0.5rem; */
+    line-height: 0.9;
 }
 
-.subtitulo {
-    font: bold;
-    color: #393939;
-    font-size: 1.5rem;
+.boton-hero {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.8rem;
     font-weight: 300;
-    opacity: 0.95;
-    margin-bottom: 0.5rem;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: solid;
+    border-color: #22BB39;
+    cursor: pointer;
+    margin-top: 3rem;
 }
 
-.hero-overlay small {
+.boton-hero:hover {
+    /* background: linear-gradient(45deg, #6bd41a, #bfff00); */
+    background-color: #bfeb1ebf;
+    color: black;
+}
+
+/* .hero-overlay small {
     display: block;
     font-size: 0.9rem;
     opacity: 0.8;
-}
+} */
 
 /* Sección Sobre */
 .sobre {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: #000;
 }
 
 .titulo-seccion {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #00be17;
+    color: #6bd41a;
+}
+
+.subtitulo-seccion {
+    color: #bebebe;
+    padding: 0.8rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #808080;
 }
 
 .contenido-sobre {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
     gap: 4rem;
-    align-items: center;
+    padding: 4rem;
 }
 
 .imagen-sobre {
     position: relative;
     height: 400px;
-    background: linear-gradient(45deg, #00be17, #bfff00);
-    background-image: url(../img/Yago-Dora_25Fiji_0Y6A9499_Cait-Miers-e1756781544513.webp);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
+    background-image: url(../img/yago_dora_sobre_Cait_Myers.jpg);
     background-size: cover;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-position-x: center;
     color: white;
     font-size: 1.2rem;
-}
-
-.marco-imagen {
-    width: 90%;
-    height: 90%;
-    border: 3px solid white;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .texto-sobre p {
@@ -179,27 +170,52 @@ body {
     line-height: 1.8;
 }
 
-.datos-personales {
-    margin-top: 2rem;
+.texto-sobre span {
+    margin-right: 1.5rem;
+    font-size: 3.5rem;
+    line-height: 0.5;
 }
 
-.dato {
+.fila-superior {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.fila-inferior {
+    width: 100%;
+}
+
+.datos-personales {
+    margin-top: 0;
     display: flex;
-    margin-bottom: 1rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .etiqueta {
     font-weight: 600;
-    min-width: 80px;
-    color: #00be17;
+    min-width: 130px;
+    color: #bebebe;
+}
+
+.valor {
+    color: #22BB39;
+}
+
+.dato {
+    display: flex;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #808080;
+    margin-bottom: 0;
 }
 
 /* Sección Logros */
+/* Sección Logros */
 .logros {
     padding: 100px 0;
-    background: white;
+    background: #000;
 }
 
 .tarjetas-logros {
@@ -208,36 +224,73 @@ body {
     gap: 2rem;
 }
 
+/* Tarjeta base */
 .tarjeta-logro {
-    background: white;
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    position: relative;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #f2f2f2;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
+/* Fondo blur + grayscale */
+.tarjeta-logro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) blur(2px) brightness(.4);
+    z-index: 1;
+    transition: filter .3s ease;
+}
+
+/* Overlay suave */
+.tarjeta-logro::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .25);
+    z-index: 2;
+}
+
+/* Contenido */
+.tarjeta-logro>* {
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+}
+
+/* Hover */
 .tarjeta-logro:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .45);
+    border-color: rgba(255, 255, 255, .25);
 }
 
-.icono-logro {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.tarjeta-logro:hover::before {
+    filter: grayscale(20%) blur(1px) brightness(.55);
 }
 
-.tarjeta-logro h3 {
-    color: #333;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+/* Imágenes por tarjeta */
+.img1::before {
+    background-image: url("../img/MEO\ RIP\ CURL\ PORTUGAL\ 25\ Yago-Dora.jpg");
+}
+
+.img2::before {
+    background-image: url("../img/img2.jpg");
+}
+
+.img3::before {
+    background-image: url("../img/img3.jpg");
 }
 
 /* Sección Galería */
 .galeria {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: #000;
 }
 
 .grid-galeria {
@@ -248,8 +301,7 @@ body {
 
 .item-galeria {
     height: 250px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
     transition: transform 0.3s ease;
 }
 
@@ -258,37 +310,37 @@ body {
 }
 
 .item-1 {
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
     background-image: url(../img/glr_Athlete-Jerseys_25Fiji_ESS_8478_Ed-Sloane-e1756776763801.webp);
     background-size: cover;
 }
 
 .item-2 {
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_0758_Ed-Sloane-e1756775920999.webp);
     background-size: cover;
 }
 
 .item-3 {
-    background: linear-gradient(45deg, #00be17, #bfff00);
-    background-image: url(../img/glr_Yago-Dora_25Fiji__C7A5254__Cait-Miers-e1758303949221.webp);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
+    background-image: url(../img/yago_dora_mirando_trofeu.jpg);
     background-size: cover;
 }
 
 .item-4 {
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_5161_Ed-Sloane.webp);
     background-size: cover;
 }
 
 .item-5 {
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_8984_Ed-Sloane-e1756775936488.webp);
     background-size: cover;
 }
 
 .item-6 {
-    background: linear-gradient(45deg, #00be17, #bfff00);
+    background: linear-gradient(45deg, #6bd41a, #bfff00);
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_9826_Ed-Sloane-e1756776806675.webp);
     background-size: cover;
 }
@@ -296,7 +348,7 @@ body {
 /* Sección Patrocinadores */
 .patrocinadores {
     padding: 80px 0;
-    background: white;
+    background: #333;
 }
 
 .logos-patrocinadores {
@@ -310,28 +362,29 @@ body {
 .logo-patrocionador {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     padding: 1rem 2rem;
-    border: 2px solid #eee;
-    border-radius: 10px;
-    transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .logo-patrocionador img {
-    width: 50px;
+    width: 75px;
     height: auto;
+    filter: grayscale(100%) opacity(0.85);
 }
 
 .logo-patrocionador:hover {
-    border-color: #00be17;
-    color: #00be17;
-    transform: translateY(-2px);
+    border-color: #6bd41a;
+    color: #6bd41a;
+}
+
+.logo-patrocionador:hover img {
+    filter: grayscale(0%) brightness(0) invert(52%) sepia(98%) saturate(385%) hue-rotate(55deg) brightness(95%) contrast(85%);
 }
 
 /* Footer */
 .pie-pagina {
-    background: #333;
+    background: #171717;
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -352,16 +405,59 @@ body {
 .red-social {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.red-social:hover {
-    color: #00be17;
+.red-social img {
+    width: 30px;
+    /* Tamaño apropiado para iconos de redes */
+    height: 30px;
+    transition: filter 0.3s ease;
+    filter: grayscale(100%) opacity(0.7);
+}
+
+.red-social:hover img {
+    filter: brightness(0) invert(52%) sepia(98%) saturate(385%) hue-rotate(55deg) brightness(95%) contrast(85%);
 }
 
 .copyright {
     opacity: 0.7;
     font-size: 0.9rem;
+}
+
+.creditos a {
+    position: absolute;
+    background-color: #00000033;
+    padding: 0.2rem;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: 5;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+/* Botón subir fijo */
+.arrow-up {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 3rem;
+    z-index: 9999;
+    max-width: 290px;
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+}
+
+.arrow-up svg {
+    fill: #fff;
+}
+
+.arrow-up:hover svg {
+    fill: #22BB39;
 }
 
 /* Responsive */
@@ -400,6 +496,10 @@ body {
         font-size: 1.2rem;
         padding: 0.8rem 1.5rem;
     }
+
+    .arrow-up {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -426,5 +526,9 @@ body {
         max-width: 220px;
         font-size: 0.7rem;
         padding: 0.4rem 0.6rem;
+    }
+
+    .arrow-up {
+        display: none;
     }
 }
