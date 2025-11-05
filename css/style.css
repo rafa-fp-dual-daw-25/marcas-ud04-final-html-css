@@ -2,10 +2,12 @@
 :root {
     /* Fuentes */
     --font-general: "Source Code Pro", monospace;
+    /* 200 ~ 900 */
     --font-titulos: "Teko", sans-serif;
 
     /* Colores */
     --color-principal: #6bd41a;
+    --color-secundario: #BFEC1D;
     --color-blanco: #fff;
     --color-negro: #000;
     --color-gris-claro: #bebebe;
@@ -16,13 +18,11 @@
 /* Reset y estilos base */
 * {
     font-family: var(--font-general);
-    /* 200 ~ 900 */
     font-weight: 500;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     line-height: 1.6;
@@ -42,7 +42,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(45deg, #BFEC1D, #6bd41a);
+    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -64,6 +64,15 @@ body {
 
 .menu a:hover {
     color: var(--color-blanco);
+}
+
+.btn-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-negro);
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -102,7 +111,6 @@ body {
     color: var(--color-blanco);
     font-size: 8rem;
     font-weight: 900;
-    /* margin-bottom: 0.5rem; */
     line-height: 0.9;
 }
 
@@ -127,12 +135,6 @@ body {
     color: black;
 }
 
-/* .hero-overlay small {
-    display: block;
-    font-size: 0.9rem;
-    opacity: 0.8;
-} */
-
 /* Sección Sobre */
 .sobre {
     padding: 100px 0;
@@ -151,7 +153,7 @@ body {
 .subtitulo-seccion {
     color: var(--color-gris-claro);
     padding: 0.8rem 0;
-    margin-bottom: 2rem;
+    margin-top: 5rem;
     border-bottom: 1px solid var(--color-gris-oscuro);
 }
 
@@ -166,7 +168,6 @@ body {
 .imagen-sobre {
     position: relative;
     height: 400px;
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/yago_dora_sobre_Cait_Myers.jpg);
     background-size: cover;
     display: flex;
@@ -178,13 +179,13 @@ body {
 }
 
 .texto-sobre p {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
-.texto-sobre span {
-    margin-right: 1.5rem;
+.texto-sobre div {
+    margin: 5rem 0rem 1rem;
     font-size: 3.5rem;
     line-height: 0.5;
 }
@@ -219,7 +220,7 @@ body {
 
 .dato {
     display: flex;
-    padding: 0.8rem 0;
+    padding: 1.3rem 0;
     border-bottom: 1px solid var(--color-gris-oscuro);
     margin-bottom: 0;
 }
@@ -252,7 +253,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
     filter: grayscale(100%) blur(2px) brightness(.45);
 }
 
@@ -288,37 +288,31 @@ body {
 }
 
 .item-1 {
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/glr_Athlete-Jerseys_25Fiji_ESS_8478_Ed-Sloane-e1756776763801.webp);
     background-size: cover;
 }
 
 .item-2 {
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_0758_Ed-Sloane-e1756775920999.webp);
     background-size: cover;
 }
 
 .item-3 {
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/yago_dora_mirando_trofeu.jpg);
     background-size: cover;
 }
 
 .item-4 {
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_5161_Ed-Sloane.webp);
     background-size: cover;
 }
 
 .item-5 {
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_8984_Ed-Sloane-e1756775936488.webp);
     background-size: cover;
 }
 
 .item-6 {
-    background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_9826_Ed-Sloane-e1756776806675.webp);
     background-size: cover;
 }
@@ -386,7 +380,6 @@ body {
 
 .red-social img {
     width: 30px;
-    /* Tamaño apropiado para iconos de redes */
     height: 30px;
     transition: filter 0.3s ease;
     filter: grayscale(100%) opacity(0.7);
@@ -421,13 +414,11 @@ body {
     right: 1.5rem;
     bottom: 3rem;
     z-index: 9999;
-    max-width: 290px;
-
-    font-size: 0.75rem;
-    line-height: 1.2;
-    padding: 4px 8px;
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(4px);
+    transition: opacity .35s ease;
 }
 
 .arrow-up svg {
@@ -440,17 +431,26 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .btn-hamburger {
+        display: block;
+        margin-left: 1rem;
+    }
+
     .menu {
+        display: none;
         flex-direction: column;
+        background: var(--color-principal);
+        padding: 1rem;
         gap: 1rem;
+    }
+
+    .menu.menu-activo {
+        background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
+        display: flex;
     }
 
     .titulo-principal {
         font-size: 2.5rem;
-    }
-
-    .subtitulo {
-        font-size: 1.2rem;
     }
 
     .contenido-sobre {
@@ -483,10 +483,6 @@ body {
 @media (max-width: 480px) {
     .titulo-principal {
         font-size: 2rem;
-    }
-
-    .subtitulo {
-        font-size: 1rem;
     }
 
     .redes-sociales {
