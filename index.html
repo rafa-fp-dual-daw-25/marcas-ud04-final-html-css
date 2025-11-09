@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web para homenagear a Yago Dora, surfista profesional brasileño">
     <title>Yago Dora - Surfista Profesional</title>
     <link rel="shortcut icon" href="./favicon/waves_32dp_00AAFF_FILL0_wght400_GRAD0_opsz40.svg" type="image/x-icon">
-
 
     <!-- Font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,188 +19,162 @@
 </head>
 
 <body>
-    <!-- Navegación -->
-    <nav class="navegacion">
+    <!-- Navegación principal con lista desordenada -->
+    <nav class="navegacion" aria-label="Navegación principal">
         <div class="contenedor">
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre Yago</a></li>
-                <li><a href="#logros">Logros</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#patrocinadores">Patrocinadores</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Sección Hero -->
-    <section id="inicio" class="hero">
-        <video class="contenedor-hero" autoplay muted loop playsinline>
-            <source src="video/clip_yago_hero_sesion.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay">
-            <h1 class="titulo-principal">
-                <span>YAGO</span><br>
-                <span>DORA</span><br>
-            </h1>
+    <header>
+        <!-- Sección Hero con video de fondo -->
+        <section id="inicio" class="hero">
+            <div class="creditos">
+                <a href="https://www.youtube.com/watch?v=XuK3IPnE_f0" target="_blank" rel="noopener">
+                    fuente: World Surf League (YouTube)
+                </a>
+            </div>
+            <video class="contenedor-hero" autoplay muted loop playsinline aria-label="Video de Yago Dora surfeando">
+                <source src="video/clip_yago_hero_sesion.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+            </video>
+            <div class="hero-overlay">
+                <h1 class="titulo-principal">
+                    <span>YAGO</span><br>
+                    <span>DORA</span><br>
+                </h1>
+                <a class="boton " href="#sobre">
+                    <p>más allá de la ola</p>
+                </a>
+            </div>
+        </section>
+    </header>
 
-            <a class="boton-hero" href="#sobre">
-                <p>más allá de la ola</p>
-            </a>
-        </div>
-    </section>
+    <main>
+        <!-- Sección Sobre Yago Dora -->
+        <section id="sobre" class="sobre">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Sobre Yago</h2>
+                <div class="contenido-sobre">
+                    <!-- Fila 1: Imagen y datos personales -->
+                    <div class="fila-superior">
+                        <div class="imagen-sobre" aria-label="Imagen de Yago Dora">
+                            <!-- Créditos -->
+                            <div class="creditos">
+                                <p><a href="https://www.worldsurfleague.com" target="_blank" rel="noopener">crédito:
+                                        Cait
+                                        Myers / WSL</a></p>
+                            </div>
+                        </div>
+                        <!-- Tabla de datos personales -->
+                        <table class="datos-personales" aria-label="Datos personales de Yago Dora">
+                            <tr class="dato">
+                                <td class="etiqueta">Ciudad natal:</td>
+                                <td class="valor">Florianópolis, SC — Brasil</td>
+                            </tr>
+                            <tr class="dato">
+                                <td class="etiqueta">Altura:</td>
+                                <td class="valor">1,81 m</td>
+                            </tr>
+                            <tr class="dato">
+                                <td class="etiqueta">Peso:</td>
+                                <td class="valor">77 kg</td>
+                            </tr>
+                            <tr class="dato">
+                                <td class="etiqueta">Estilo:</td>
+                                <td class="valor">Regular</td>
+                            </tr>
+                            <tr class="dato">
+                                <td class="etiqueta">Edad:</td>
+                                <td class="valor">29 años (18/05/1996)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!-- Fila 2: Texto descriptivo -->
+                    <div class="fila-inferior">
+                        <div class="texto-sobre">
+                            <p>Yago Dora es un surfista profesional brasileño que compite en
+                                la Liga Mundial de Surf ( WSL) . En septiembre de 2025, se proclamó Campeón del Mundo en
+                                el
+                                Campeonato Masculino de la WSL de 2025. Conocido por su estilo innovador y agresivo,
+                                Yago ha
+                                revolucionado el surf moderno con su approach creativo y técnico.</p>
+                            <h3 class="subtitulo-seccion">Primeros años de vida</h3>
+                            <p>Yago Dora nació en Curitiba, pero desarrolló su pasión por el surf cuando su familia se
+                                mudó
+                                a Florianópolis , animados por su padre, Leandro Dora, un gran entrenador de la élite
+                                mundial del surf. Dora comenzó más tarde que otros en el mundo del surf, pero a los 11
+                                años
+                                todo cambió y pronto realizaba maniobras radicales.</p>
 
-    <!-- Sección Sobre -->
-    <section id="sobre" class="sobre">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Sobre Yago</h2>
-            <div class="contenido-sobre">
-                <!-- Fila 1: Imagen y datos personales -->
-                <div class="fila-superior">
-                    <div class="imagen-sobre">
-                        <!-- Créditos -->
-                        <div class="creditos">
-                            <p><a href="https://www.worldsurfleague.com" target="_blank" rel="noopener">crédito: Cait
-                                    Myers / WSL</a></p>
+                            <h3 class="subtitulo-seccion">Carrera</h3>
+                            <div class="carrera-container">
+                                <h4 class="anio">2017</h4>
+                                <p>Hizo su primera aparición en un evento del WSL Men's Championship Tour en la etapa de
+                                    Saquarema del Oi Rio Pro como invitado, donde tuvo una actuación
+                                    sorprendentementebuena,
+                                    terminando tercero y derrotando a grandes nombres del surf mundial como Gabriel
+                                    Medina ,
+                                    Mick Fanning y John John Florence . Ese mismo año, quedó sexto en la Serie de
+                                    Clasificación
+                                    y se clasificó para el CT 2018 por primera vez en su carrera.</p>
+                                <p>En los años siguientes, Yago rápidamente ganó prominencia en el circuito mundial,
+                                    pero su
+                                    ascenso se vio interrumpido después de romperse el ligamento del tobillo izquierdo,
+                                    lo
+                                    que
+                                    lo dejó fuera de los primeros 5 eventos del circuito mundial en 2022.</p>
+                                <!-- Enlace a galería -->
+                                <a href="galeria.html#momentos-relevantes" class="boton">Línea del tiempo →</a>
+                            </div>
+
+                            <p>En los dos años siguientes, Dora vivió sus mejores momentos...
+                            </p>
+
+                            <!-- Enlace a galería -->
+                            <a href="galeria.html#galeria-principal" class="boton ">Galería →</a>
+
+                            <h4 class="anio">2023</h4>
+                            <p>Yago alcanzó su primera final y ganó el VIVO Rio Pro, derrotando a Ethan Ewing en la
+                                final.
+                                Terminó séptimo
+                                en la clasificación final.
+                            </p>
+                            <h4 class="anio">2024</h4>
+                            <p>Yago tuvo un inicio de temporada complicado y estuvo a
+                                punto de quedar eliminado a mitad de temporada, pero se recuperó en la recta final,
+                                llegando
+                                a dos finales consecutivas, en El Salvador y nuevamente en el VIVO Rio Pro. Estuvo cerca
+                                de
+                                clasificarse para las Finales de la WSL de 2024 , pero perdió la plaza en la última fase
+                                ante su compatriota Ítalo Ferreira, terminando la temporada en sexto lugar.</p>
                         </div>
                     </div>
-                    <table class="datos-personales">
-                        <tr class="dato">
-                            <td class="etiqueta">Ciudad natal:</td>
-                            <td class="valor">Florianópolis, SC — Brasil</td>
-                        </tr>
-
-                        <tr class="dato">
-                            <td class="etiqueta">Altura:</td>
-                            <td class="valor">1,81 m</td>
-                        </tr>
-
-                        <tr class="dato">
-                            <td class="etiqueta">Peso:</td>
-                            <td class="valor">77 kg</td>
-                        </tr>
-
-                        <tr class="dato">
-                            <td class="etiqueta">Estilo:</td>
-                            <td class="valor">Regular</td>
-                        </tr>
-
-                        <tr class="dato">
-                            <td class="etiqueta">Edad:</td>
-                            <td class="valor">29 años (18/05/1996)</td>
-                        </tr>
-                    </table>
-                </div>
-                <!-- Fila 2: Texto descriptivo -->
-                <div class="fila-inferior">
-                    <div class="texto-sobre">
-                        <p>Yago Dora es un surfista profesional brasileño que compite en
-                            la Liga Mundial de Surf ( WSL) . En septiembre de 2025, se proclamó Campeón del Mundo en el
-                            Campeonato Masculino de la WSL de 2025. Conocido por su estilo innovador y agresivo, Yago ha
-                            revolucionado el surf moderno con su approach creativo y técnico.</p>
-
-                        <h2 class="subtitulo-seccion">Primeros años de vida</h2>
-
-                        <p>Yago Dora nació en Curitiba, pero desarrolló su pasión por el surf cuando su familia se mudó
-                            a Florianópolis , animados por su padre, Leandro Dora, un gran entrenador de la élite
-                            mundial del surf. Dora comenzó más tarde que otros en el mundo del surf, pero a los 11 años
-                            todo cambió y pronto realizaba maniobras radicales.</p>
-
-                        <h2 class="subtitulo-seccion">Carrera</h2>
-
-                        <div>2017</div>
-                        <p>Hizo su primera aparición en un evento del WSL Men's Championship Tour en la etapa de
-                            Saquarema del Oi Rio Pro como invitado, donde tuvo una actuación sorprendentementebuena,
-                            terminando tercero y derrotando a grandes nombres del surf mundial como Gabriel Medina ,
-                            Mick Fanning y John John Florence . Ese mismo año, quedó sexto en la Serie de Clasificación
-                            y se clasificó para el CT 2018 por primera vez en su carrera.</p>
-
-                        <p>En los años siguientes, Yago rápidamente ganó prominencia en el circuito mundial, pero su
-                            ascenso se vio interrumpido después de romperse el ligamento del tobillo izquierdo, lo que
-                            lo dejó fuera de los primeros 5 eventos del circuito mundial en 2022.</p>
-
-                        <p>En los dos años siguientes, Dora vivió sus mejores momentos...</p>
-
-                        <div>2023</div>
-                        <p>Yago alcanzó su primera final y ganó el VIVO Rio Pro, derrotando a Ethan Ewing en la final.
-                            Terminó séptimo
-                            en la clasificación final.
-                        </p>
-
-                        <div>2024</div>
-                        <p>Yago tuvo un inicio de temporada complicado y estuvo a
-                            punto de quedar eliminado a mitad de temporada, pero se recuperó en la recta final, llegando
-                            a dos finales consecutivas, en El Salvador y nuevamente en el VIVO Rio Pro. Estuvo cerca de
-                            clasificarse para las Finales de la WSL de 2024 , pero perdió la plaza en la última fase
-                            ante su compatriota Ítalo Ferreira, terminando la temporada en sexto lugar.</p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Logros -->
-    <section id="logros" class="logros">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Logros Destacados</h2>
-            <div class="tarjetas-logros">
-
-                <div class="tarjeta-logro">
-                    <img class="fondo-logro" src="../img/MEO RIP CURL PORTUGAL 25 Yago-Dora.jpg" alt="Foto_Yago_Dora">
-                    <h3>MEO Rip Curl Pro Portugal 2025</h3>
-                    <p>Victoria histórica sobre el número 1, Italo Ferreira, con exhibición completa de aéreos y
-                        Supertubos.</p>
+        <!-- Sección Patrocinadores -->
+        <section id="patrocinadores" class="patrocinadores">
+            <div class="contenedor">
+                <h6 class="titulo-seccion">Patrocinadores</h6>
+                <div class="logos-patrocinadores">
+                    <a class="logo-patrocionador" href="https://www.volcom.es/"><img src="./img/iconos/Volcom.svg"
+                            alt="Logo de Volcom"></a>
+                    <a class="logo-patrocionador" href="https://www.monsterenergy.com/es-ar/surf/yago-dora/"><img
+                            src="img/iconos/Monster.svg" alt="Logo de Monster Energy"></a>
+                    <a class="logo-patrocionador" href="https://eu.hurley.com/es"><img src="img/iconos/Hurley.svg"
+                            alt="Logo de Hurley"></a>
                 </div>
-
-                <div class="tarjeta-logro">
-                    <img class="fondo-logro" src="img/glr_World-Champions_25Fiji__C7A5181__Cait-Miers.webp"
-                        alt="Foto_Yago_Dora">
-                    <h3>Mejor Performance del Año</h3>
-                    <p>Reconocido por la mejor maniobra del año 2023 en el Championship Tour.</p>
-                </div>
-
-                <div class="tarjeta-logro">
-                    <img class="fondo-logro" src="img/glr_Yago-Dora_25Fiji_ESS_9826_Ed-Sloane-e1756776806675.webp"
-                        alt="Foto_Yago_Dora">
-                    <h3>Top 5 Ranking Mundial</h3>
-                    <p>Posicionamiento consistente entre los mejores surfistas del mundo temporada tras temporada.</p>
-                </div>
-
             </div>
-        </div>
-    </section>
-
-    <!-- Sección Galería -->
-    <section id="galeria" class="galeria">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Galería</h2>
-            <div class="grid-galeria">
-                <div class="item-galeria item-1"></div>
-                <div class="item-galeria item-2"></div>
-                <div class="item-galeria item-3"></div>
-                <div class="item-galeria item-4"></div>
-                <div class="item-galeria item-5"></div>
-                <div class="item-galeria item-6"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Patrocinadores -->
-    <section id="patrocinadores" class="patrocinadores">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Patrocinadores</h2>
-            <div class="logos-patrocinadores">
-                <a class="logo-patrocionador" href="https://www.volcom.es/"><img src="./img/iconos/Volcom.svg"
-                        alt="Logo_Volcom"></a>
-
-                <a class="logo-patrocionador" href="https://www.monsterenergy.com/es-ar/surf/yago-dora/"><img
-                        src="img/iconos/Monster.svg" alt="Logo_Monster"></a>
-
-                <a class="logo-patrocionador" href="https://eu.hurley.com/es"><img src="img/iconos/Hurley.svg"
-                        alt="Logo_Hurley"></a>
-
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="pie-pagina">
@@ -209,14 +183,12 @@
                 <p>Sigue a Yago en sus redes sociales</p>
 
                 <div class="redes-sociales">
-                    <a href="https://www.instagram.com/yagodora/" class="red-social" target="_blank"><img
-                            src="./img/iconos/instagram.svg" alt="Instagram"></a>
-
-                    <a href="https://www.facebook.com/YagoDoraa/" class="red-social" target="_blank"><img
-                            class="red-social" src="img/iconos/facebook.svg" alt=""></a>
-
-                    <a href="https://www.youtube.com/@yagodorainskinnygoat09" class="red-social" target="_blank"><img
-                            src="img/iconos/youtube.svg" alt="Youtube"></a>
+                    <a href="https://www.instagram.com/yagodora/" class="red-social" target="_blank"
+                        aria-label="Instagram de Yago Dora"><img src="./img/iconos/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/YagoDoraa/" class="red-social" target="_blank"
+                        aria-label="Facebook de Yago Dora"><img src="img/iconos/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@yagodorainskinnygoat09" class="red-social" target="_blank"
+                        aria-label="Youtube de Yago Dora"><img src="img/iconos/youtube.svg" alt="Youtube"></a>
                 </div>
 
                 <p class="copyright">&copy; 2025 Yago Dora. Todos los derechos reservados.</p>
@@ -225,8 +197,8 @@
     </footer>
 
     <!-- Botón subir fijo -->
-    <a class="arrow-up" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
-            width="48px" fill="#000">
+    <a class="arrow-up" href="#" aria-label="Volver al inicio">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000">
             <path d="M160-780v-60h640v60H160Zm290 660v-484L329-483l-43-43 194-194 190 190-43 43-117-117v484h-60Z" />
         </svg>
     </a>

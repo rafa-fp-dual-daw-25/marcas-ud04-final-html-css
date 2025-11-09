@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web para homenagear a Yago Dora, surfista profesional brasileño">
+    <title>Yago Dora - Surfista Profesional</title>
+    <link rel="shortcut icon" href="./favicon/waves_32dp_00AAFF_FILL0_wght400_GRAD0_opsz40.svg" type="image/x-icon">
+
+
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Teko:wght@300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- UTILIZACIÓN DE LISTAS DESORDENADAS -->
+    <!-- Navegación principal con lista desordenada -->
+    <nav class="navegacion" aria-label="Navegación principal">
+        <div class="contenedor">
+            <ul class="menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#sobre">Sobre Yago</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulario de Contacto -->
+    <section class="formulario-contacto">
+
+        <div class="contenedor">
+            <form class="formulario" action="#" method="get">
+                <h1 class="titulo-principal">Envía un mensaje a Yago</h1>
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="boton">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección Patrocinadores -->
+    <section id="patrocinadores" class="patrocinadores">
+        <div class="contenedor">
+            <h6 class="titulo-seccion">Patrocinadores</h6>
+            <div class="logos-patrocinadores">
+                <a class="logo-patrocionador" href="https://www.volcom.es/"><img src="./img/iconos/Volcom.svg"
+                        alt="Logo de Volcom"></a>
+                <a class="logo-patrocionador" href="https://www.monsterenergy.com/es-ar/surf/yago-dora/"><img
+                        src="img/iconos/Monster.svg" alt="Logo de Monster Energy"></a>
+                <a class="logo-patrocionador" href="https://eu.hurley.com/es"><img src="img/iconos/Hurley.svg"
+                        alt="Logo de Hurley"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <p>Sigue a Yago en sus redes sociales</p>
+
+                <div class="redes-sociales">
+                    <a href="https://www.instagram.com/yagodora/" class="red-social" target="_blank"><img
+                            src="./img/iconos/instagram.svg" alt="Instagram"></a>
+
+                    <a href="https://www.facebook.com/YagoDoraa/" class="red-social" target="_blank"><img
+                            class="red-social" src="img/iconos/facebook.svg" alt=""></a>
+
+                    <a href="https://www.youtube.com/@yagodorainskinnygoat09" class="red-social" target="_blank"><img
+                            src="img/iconos/youtube.svg" alt="Youtube"></a>
+                </div>
+
+                <p class="copyright">&copy; 2025 Yago Dora. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón subir fijo -->
+    <a class="arrow-up" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+            width="48px" fill="#000">
+            <path d="M160-780v-60h640v60H160Zm290 660v-484L329-483l-43-43 194-194 190 190-43 43-117-117v484h-60Z" />
+        </svg>
+    </a>
+    <!-- Enlace a Javascript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

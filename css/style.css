@@ -7,6 +7,7 @@
 
     /* Colores */
     --color-principal: #6bd41a;
+    --color-principal-bg-transp: #6bd41a46;
     --color-secundario: #BFEC1D;
     --color-blanco: #fff;
     --color-negro: #000;
@@ -62,8 +63,10 @@ body {
     font-weight: 600;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a:focus {
     color: var(--color-blanco);
+    outline: none;
 }
 
 .btn-hamburger {
@@ -85,17 +88,19 @@ body {
     height: 100vh;
     width: 100%;
     padding-right: 3vw;
+    margin-top: 36px;
 }
 
 .contenedor-hero {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    object-position: top;
 }
 
 .hero-overlay {
@@ -114,31 +119,34 @@ body {
     line-height: 0.9;
 }
 
-.boton-hero {
+/* Botones */
+.boton {
     display: inline-block;
-    color: var(--color-blanco);
+    color: var(--color-negro);
+    background-color: var(--color-principal-bg-transp);
     padding: 1rem 2.5rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
     border: solid 2px;
     border-color: var(--color-principal);
     cursor: pointer;
-    margin-top: 3rem;
+    margin: 2rem 0 4rem;
 }
 
-.boton-hero:hover {
+.boton:hover,
+.boton:focus {
+    color: var(--color-blanco);
     background-color: var(--color-principal);
-    color: black;
+    border-color: var(--color-secundario);
+    outline: none;
 }
 
 /* Sección Sobre */
-.sobre {
-    padding: 100px 0;
-    background: var(--color-negro);
+section.sobre {
+    padding: 3rem 0 6rem;
 }
 
 .titulo-seccion {
@@ -184,10 +192,19 @@ body {
     line-height: 1.8;
 }
 
-.texto-sobre div {
-    margin: 5rem 0rem 1rem;
+/* Contenedor para la sección de carrera */
+.carrera-container {
+    margin: 2rem 0;
+}
+
+/* Estilos para años */
+.anio {
+    margin: 3rem 0 1rem 0;
     font-size: 3.5rem;
-    line-height: 0.5;
+    line-height: 1;
+    color: var(--color-principal);
+    font-family: var(--font-titulos);
+    font-weight: 700;
 }
 
 .fila-superior {
@@ -206,6 +223,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
 }
 
 .etiqueta {
@@ -227,7 +245,7 @@ body {
 
 /* Sección Logros */
 .logros {
-    padding: 100px 0;
+    padding: 3rem 0 6rem;
     background: var(--color-negro);
 }
 
@@ -242,7 +260,6 @@ body {
     overflow: hidden;
     padding: 2rem;
     text-align: center;
-    border-radius: 8px;
     color: var(--color-blanco);
 }
 
@@ -265,9 +282,11 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, .7);
 }
 
+/*  */
+
 /* Sección Galería */
 .galeria {
-    padding: 100px 0;
+    padding: 3rem 0 6rem;
     background: var(--color-negro);
 }
 
@@ -280,46 +299,65 @@ body {
 .item-galeria {
     height: 250px;
     background: linear-gradient(45deg, var(--color-principal), var(--color-secundario));
-    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
 }
 
-.item-galeria:hover {
+.item-galeria:hover,
+.item-galeria:focus {
     transform: scale(1.05);
+    outline: 2px solid var(--color-principal);
 }
 
 .item-1 {
     background-image: url(../img/glr_Athlete-Jerseys_25Fiji_ESS_8478_Ed-Sloane-e1756776763801.webp);
-    background-size: cover;
 }
 
 .item-2 {
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_0758_Ed-Sloane-e1756775920999.webp);
-    background-size: cover;
 }
 
 .item-3 {
     background-image: url(../img/yago_dora_mirando_trofeu.jpg);
-    background-size: cover;
 }
 
 .item-4 {
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_5161_Ed-Sloane.webp);
-    background-size: cover;
 }
 
 .item-5 {
     background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_8984_Ed-Sloane-e1756775936488.webp);
-    background-size: cover;
 }
 
 .item-6 {
-    background-image: url(../img/glr_Yago-Dora_25Fiji_ESS_9826_Ed-Sloane-e1756776806675.webp);
-    background-size: cover;
+    background-image: url(../img/MEO\ RIP\ CURL\ PORTUGAL\ 25\ Yago-Dora.jpg);
+}
+
+.item-7 {
+    background-image: url(../img/yagodora_brentbielmann006_800x.webp);
+}
+
+.item-8 {
+    background-image: url(../img/Rip_Curl_Pro_Portugal_23\(Laurent\ Masurel_World\ Surf\ League\).jpg);
+}
+
+.item-9 {
+    background-image: url(../img/Yago-Dora-WSL.png);
+}
+
+.galeria a {
+    padding: 0.2rem;
+    float: right;
+    z-index: 5;
+    color: var(--color-blanco);
+    text-shadow: 2px 2px 3px var(--color-negro);
+    font-size: 0.8rem;
+    text-decoration: none;
 }
 
 /* Sección Patrocinadores */
 .patrocinadores {
-    padding: 80px 0;
+    padding: 3rem 0;
     background: #333;
 }
 
@@ -345,12 +383,101 @@ body {
     filter: grayscale(100%) opacity(0.85);
 }
 
-.logo-patrocionador:hover {
+.logo-patrocionador:hover,
+.logo-patrocionador:focus {
     color: var(--color-principal);
+    outline: none;
 }
 
-.logo-patrocionador:hover img {
+.logo-patrocionador:hover img,
+.logo-patrocionador:focus img {
     filter: grayscale(0%) brightness(0) invert(52%) sepia(98%) saturate(385%) hue-rotate(55deg) brightness(95%) contrast(85%);
+}
+
+/* Estilos para la lista ordenada */
+.momentos-destacados {
+    padding: 3rem 0 6rem;
+    background: var(--color-fondo-dark);
+}
+
+.lista-momentos {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+.lista-momentos li {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--color-principal);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.lista-momentos li:hover,
+.lista-momentos li:focus {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+    outline: none;
+}
+
+/* Formulario */
+.formulario-contacto {
+    padding: 6rem 0 6rem;
+    background:
+        linear-gradient(rgba(23, 23, 23, 0.7),
+            rgba(23, 23, 23, 0.7)),
+        url(../img/YagoDora-bandera.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-formulario label {
+    margin-bottom: 0.5rem;
+    color: var(--color-gris-claro);
+    font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    padding: 1rem;
+    border: 2px solid var(--color-gris-oscuro);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-blanco);
+    font-size: 1rem;
+    border-radius: 4px;
+    font-family: var(--font-general);
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+    color: var(--color-gris-claro);
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 /* Footer */
@@ -381,11 +508,17 @@ body {
 .red-social img {
     width: 30px;
     height: 30px;
-    transition: filter 0.3s ease;
     filter: grayscale(100%) opacity(0.7);
 }
 
-.red-social:hover img {
+.red-social:hover,
+.red-social:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+.red-social:hover img,
+.red-social:focus img {
     filter: brightness(0) invert(52%) sepia(98%) saturate(385%) hue-rotate(55deg) brightness(95%) contrast(85%);
 }
 
@@ -419,13 +552,27 @@ body {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(4px);
     transition: opacity .35s ease;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .arrow-up svg {
     fill: var(--color-blanco);
+    transition: none;
 }
 
-.arrow-up:hover svg {
+.arrow-up:hover,
+.arrow-up:focus {
+    outline: none;
+}
+
+.arrow-up:hover svg,
+.arrow-up:focus svg {
     fill: var(--color-principal);
 }
 
@@ -449,12 +596,12 @@ body {
         display: flex;
     }
 
-    .titulo-principal {
-        font-size: 2.5rem;
+    .titulo-principal span {
+        font-size: 5rem;
     }
 
     .contenido-sobre {
-        grid-template-columns: 1fr;
+        padding: 2rem;
         gap: 2rem;
     }
 
@@ -462,8 +609,17 @@ body {
         height: 300px;
     }
 
+    .fila-superior {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .tarjetas-logros {
         grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        gap: 1rem;
     }
 
     .logos-patrocinadores {
@@ -475,18 +631,49 @@ body {
         padding: 0.8rem 1.5rem;
     }
 
+    .lista-momentos {
+        padding-left: 1rem;
+    }
+
+    .lista-momentos li {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
     .arrow-up {
         display: none;
     }
 }
 
 @media (max-width: 480px) {
-    .titulo-principal {
-        font-size: 2rem;
+    .titulo-principal span {
+        font-size: 3rem;
+    }
+
+    .boton {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .boton-enviar {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .contenido-sobre {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .anio {
+        font-size: 2.5rem;
+        margin: 2rem 0 0.8rem 0;
     }
 
     .redes-sociales {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
     }
 
@@ -494,15 +681,11 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .creditos {
+    .creditos a {
         right: 0.5rem;
         bottom: 0.5rem;
         max-width: 220px;
         font-size: 0.7rem;
         padding: 0.4rem 0.6rem;
-    }
-
-    .arrow-up {
-        display: none;
     }
 }
