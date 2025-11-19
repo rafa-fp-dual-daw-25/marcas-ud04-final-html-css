@@ -384,12 +384,6 @@ section.sobre {
     filter: grayscale(100%) opacity(0.85);
 }
 
-.logo-patrocionador:hover,
-.logo-patrocionador:focus {
-    color: var(--color-principal);
-    outline: none;
-}
-
 .logo-patrocionador:hover img,
 .logo-patrocionador:focus img {
     filter: grayscale(0%) brightness(0) invert(52%) sepia(98%) saturate(385%) hue-rotate(55deg) brightness(95%) contrast(85%);
